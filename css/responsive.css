@@ -1,0 +1,1235 @@
+/* ===== RESPONSIVE DESIGN ===== */
+/* ===== LOADING SCREEN LOGO RESPONSIVE ===== */
+@media (max-width: 480px) {
+    .loading-logo img {
+        height: 40px !important;
+        max-width: 80vw;
+    }
+}
+
+@media (max-width: 350px) {
+    .loading-logo img {
+        height: 32px !important;
+        max-width: 90vw;
+    }
+}
+
+/* ===== HERO SECTION RESPONSIVE STYLES ===== */
+
+/* Large screens (1200px and up) */
+@media (max-width: 1199px) {
+    .hero-container {
+        max-width: 1000px;
+        gap: 3rem;
+    }
+
+    .hero-name {
+        font-size: 3.5rem;
+    }
+
+    .hero-role {
+        font-size: 1.6rem;
+    }
+
+    .image-container {
+        width: 350px;
+        height: 350px;
+    }
+}
+
+/* Medium screens (992px and up) */
+@media (max-width: 991px) {
+    .hero-container {
+        max-width: 800px;
+        padding: 0 1.5rem;
+        gap: 2rem;
+    }
+
+    .hero-name {
+        font-size: 3rem;
+    }
+
+    .hero-role {
+        font-size: 1.4rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .image-container {
+        width: 300px;
+        height: 300px;
+    }
+
+    .floating-badge {
+        font-size: 0.7rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+/* Tablet and smaller screens */
+@media (max-width: 768px) {
+    .hero-section {
+        /* Height is now controlled by main CSS file with height-based media queries */
+        padding-top: 65px;
+        padding-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    /* For tall mobile devices, use content-based height */
+    @media (min-height: 800px) {
+        .hero-section {
+            min-height: auto;
+            height: auto;
+            align-items: flex-start;
+            padding-top: 80px;
+        }
+
+        .hero-container {
+            margin-top: 0;
+            padding-top: 2rem;
+        }
+    }
+
+    /* Hide particles canvas on small screens */
+    #particle-canvas {
+        display: none !important;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+        text-align: center;
+        padding: 0;
+        width: 100%;
+        max-width: 600px;
+        margin-top: 0;
+    }
+
+    .hero-content {
+        order: 2;
+        align-items: center;
+    }
+
+    .hero-image {
+        order: 1;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        align-self: flex-start;
+    }
+
+    .hero-greeting {
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+        font-weight: 600;
+        letter-spacing: 2.5px;
+    }
+
+    .hero-name {
+        font-size: 2.8rem;
+        margin-bottom: 0.5rem;
+        line-height: 1.1;
+    }
+
+    .hero-role {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin: 0.1rem 0 0.6rem 0;
+    }
+
+    .hero-description {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        padding: 0;
+        line-height: 1.5;
+        max-width: 90%;
+    }
+
+    .hero-buttons {
+        margin-bottom: 1.5rem;
+        gap: 0.8rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.85rem;
+        width: 100%;
+        max-width: 320px;
+        justify-content: center;
+    }
+
+    .hero-social {
+        justify-content: center;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        gap: 1.3rem;
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .image-container {
+        width: 280px;
+        height: 280px;
+    }
+
+    /* Hide floating badges on mobile */
+    .floating-badge {
+        display: none !important;
+    }
+}
+
+/* Small mobile screens */
+@media (max-width: 480px) {
+    .hero-section {
+        padding-top: 60px;
+        padding-bottom: 1.5rem;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+    }
+
+    /* For tall small mobile devices, use content-based height */
+    @media (min-height: 800px) {
+        .hero-section {
+            min-height: auto;
+            height: auto;
+            padding-top: 70px;
+        }
+
+        .hero-container {
+            margin-top: 1rem;
+        }
+    }
+
+    .hero-container {
+        padding: 0;
+        gap: 1rem;
+        width: 100%;
+        max-width: none;
+        text-align: left;
+        margin-top: 1.5rem;
+    }
+
+    .hero-greeting {
+        font-size: 0.9rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+        margin-bottom: 0.4rem;
+    }
+
+    .hero-name {
+        font-size: 2.4rem;
+        margin-bottom: 0.4rem;
+        line-height: 1.1;
+    }
+
+    .hero-role {
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin: 0.1rem 0 0.5rem 0;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+        line-height: 1.4;
+        margin-bottom: 0.8rem;
+        padding: 0;
+        max-width: 95%;
+    }
+
+    .hero-buttons {
+        margin-bottom: 1.2rem;
+        gap: 0.8rem;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.85rem;
+        width: 100%;
+        max-width: 100%;
+        justify-content: center;
+        min-height: 48px;
+        margin: 0;
+    }
+
+    .hero-social {
+        justify-content: center;
+        margin-top: 0.4rem;
+        margin-bottom: 0.4rem;
+        gap: 1.2rem;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .social-link {
+        width: 44px;
+        height: 44px;
+        font-size: 1.1rem;
+    }
+
+    .image-container {
+        width: 220px;
+        height: 220px;
+    }
+
+    .hero-image {
+        margin-bottom: 0.6rem;
+        align-self: flex-start;
+    }
+
+    /* Keep floating badges hidden on mobile */
+    .floating-badge {
+        display: none !important;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 320px) {
+    .hero-section {
+        padding-top: 50px;
+        padding-bottom: 1.5rem;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    /* For tall extra small devices, use content-based height */
+    @media (min-height: 800px) {
+        .hero-section {
+            min-height: auto;
+            height: auto;
+            padding-top: 60px;
+        }
+
+        .hero-container {
+            margin-top: 0.5rem;
+        }
+    }
+
+    .hero-container {
+        padding: 0;
+        gap: 0.8rem;
+        width: 100%;
+        max-width: none;
+        text-align: left;
+        margin-top: 1rem;
+    }
+
+    .hero-greeting {
+        font-size: 0.85rem;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        margin-bottom: 0.3rem;
+    }
+
+    .hero-name {
+        font-size: 2.1rem;
+        margin-bottom: 0.3rem;
+        line-height: 1.1;
+    }
+
+    .hero-role {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin: 0.05rem 0 0.4rem 0;
+    }
+
+    .hero-description {
+        font-size: 0.9rem;
+        margin-bottom: 0.6rem;
+        padding: 0;
+        line-height: 1.3;
+        max-width: 100%;
+    }
+
+    .hero-buttons {
+        margin-bottom: 1rem;
+        gap: 0.8rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.8rem;
+        width: 100%;
+        justify-content: center;
+        min-height: 48px;
+        margin: 0;
+    }
+
+    .image-container {
+        width: 200px;
+        height: 200px;
+    }
+
+    .hero-image {
+        margin-bottom: 0.5rem;
+        align-self: flex-start;
+    }
+
+    .social-link {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .hero-social {
+        gap: 1rem;
+        margin-top: 0.3rem;
+        margin-bottom: 0.3rem;
+        justify-content: center;
+        width: 100%;
+    }
+
+    /* Keep floating badges hidden */
+    .floating-badge {
+        display: none !important;
+    }
+}
+
+/* ===== NAVBAR RESPONSIVE STYLES ===== */
+
+/* Tablet and smaller screens */
+@media (max-width: 992px) {
+    .navbar-container {
+        padding: 0 1.5rem;
+    }
+
+    .navbar-center {
+        gap: 1.5rem;
+    }
+
+    .nav-link {
+        font-size: 0.9rem;
+    }
+
+    .theme-toggle {
+        width: 55px;
+        height: 28px;
+    }
+
+    .theme-toggle-slider {
+        width: 22px;
+        height: 22px;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+    .navbar-container {
+        padding: 0 1rem;
+        height: 60px;
+    }
+
+    .navbar-left {
+        gap: 0.5rem;
+    }
+
+    .navbar-name {
+        display: block !important;
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
+    .navbar-center {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+        padding: 10px;
+    }
+
+    .hamburger-line {
+        width: 24px;
+        height: 3px;
+        margin: 4px 0;
+    }
+
+    .mobile-menu {
+        display: block;
+        top: 60px;
+        height: calc(100vh - 60px);
+    }
+
+    .profile-photo {
+        width: 45px;
+        height: 45px;
+    }
+
+    .hire-btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    .theme-toggle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .theme-toggle-icon {
+        font-size: 18px;
+    }
+}
+
+/* Small mobile screens */
+@media (max-width: 480px) {
+    .navbar-container {
+        padding: 0 0.75rem;
+        height: 55px;
+    }
+
+    .navbar-left {
+        gap: 0.4rem;
+    }
+
+    .navbar-name {
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+
+    .mobile-menu {
+        top: 55px;
+        height: calc(100vh - 55px);
+        padding: 1.5rem;
+    }
+
+    .profile-photo {
+        width: 42px;
+        height: 42px;
+    }
+
+    .hire-btn {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.75rem;
+    }
+
+    .theme-toggle {
+        width: 36px;
+        height: 36px;
+    }
+
+    .theme-toggle-icon {
+        font-size: 16px;
+    }
+
+    .hamburger {
+        padding: 8px;
+    }
+
+    .hamburger-line {
+        width: 20px;
+        height: 3px;
+        margin: 3px 0;
+    }
+
+    .mobile-nav-link {
+        font-size: 1.2rem;
+        padding: 1rem 0;
+        font-weight: 500;
+    }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+    .btn-primary {
+        background: #000 !important;
+        border: 2px solid #000 !important;
+    }
+
+    .btn-secondary,
+    .btn-outline {
+        border-width: 3px !important;
+    }
+
+    .project-overlay {
+        background: rgba(0, 0, 0, 0.9) !important;
+    }
+
+    .skill-progress,
+    .progress {
+        background: #000 !important;
+    }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .profile-img {
+        animation: none !important;
+    }
+
+    .scroll-indicator {
+        animation: none !important;
+    }
+}
+
+/* ===== SKILLS SECTION RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .skills-section {
+        padding: 0 0 2rem 0;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
+    }
+
+    .tool-item {
+        padding: 1.2rem;
+    }
+
+    .tool-item .tool-icon i {
+        font-size: 2.2rem;
+    }
+
+    .tool-item span {
+        font-size: 0.9rem;
+    }
+
+    .learning-section {
+        margin-top: 1rem;
+    }
+
+    .learning-tags {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .learning-tag {
+        padding: 0.7rem 1rem;
+        font-size: 0.85rem;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .main-skills h3,
+    .supporting-skills h3,
+    .learning-section h3 {
+        font-size: 1.6rem;
+        margin-bottom: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-section {
+        padding: 0 0 1.5rem 0;
+    }
+
+    .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .tool-item {
+        padding: 1rem;
+    }
+
+    .tool-item .tool-icon i {
+        font-size: 1.8rem;
+    }
+
+    .tool-item span {
+        font-size: 0.85rem;
+    }
+
+    .skill-bar {
+        padding: 1.2rem;
+    }
+
+    .main-skills h3,
+    .supporting-skills h3,
+    .learning-section h3 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+
+    .learning-tags {
+        gap: 0.6rem;
+        max-width: 400px;
+    }
+
+    .learning-tag {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* ===== EDUCATION SECTION RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .education-section {
+        padding: 3rem 0;
+    }
+
+    /* Timeline Responsive */
+    .education-timeline::before {
+        left: 20px;
+    }
+
+    .timeline-item {
+        padding-left: 60px;
+        margin-bottom: 2rem;
+    }
+
+    .timeline-icon {
+        left: 8px;
+        width: 24px;
+        height: 24px;
+        font-size: 0.8rem;
+    }
+
+    .timeline-content {
+        padding: 1.5rem;
+    }
+
+    .timeline-content::before {
+        left: -8px;
+        border-right-width: 8px;
+        border-top-width: 8px;
+        border-bottom-width: 8px;
+    }
+
+    .timeline-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .timeline-content h4 {
+        font-size: 1.1rem;
+    }
+
+    .institution {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+
+    .timeline-period {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    /* Education status badges - mobile optimized */
+    .education-status {
+        font-size: 0.65rem;
+        padding: 0.2rem 0.6rem;
+        margin-left: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .skill-tags {
+        gap: 0.4rem;
+    }
+
+    .skill-tag {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    /* ===== CERTIFICATES RESPONSIVE BASED ON SPECIFIC BREAKPOINTS ===== */
+
+    /* Large screens (1014px+) - 3 certificates side by side */
+    @media (min-width: 1015px) {
+        .certificates-grid {
+            grid-template-columns: repeat(3, 1fr) !important;
+            gap: 2rem;
+        }
+
+        .desktop-third-cert {
+            display: block !important;
+        }
+
+        .mobile-only {
+            display: none !important;
+        }
+    }
+
+    /* Medium screens (680px to 1014px) - 2 certificates side by side, 3rd in Show More */
+    @media (min-width: 681px) and (max-width: 1014px) {
+        .certificates-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 1.5rem;
+            padding: 0 1rem;
+        }
+
+        .desktop-third-cert {
+            display: none !important;
+        }
+
+        .mobile-only {
+            display: block !important;
+        }
+
+        #certificates-photo-extra {
+            display: none !important;
+            margin: 0 !important;
+        }
+
+        #certificates-photo-extra.show-expanded {
+            display: grid !important;
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 1.5rem;
+            padding: 0 1rem;
+            margin-bottom: 1rem !important;
+        }
+    }
+
+    /* Small screens (680px and below) - 1 certificate in landscape, others in Show More */
+    @media (max-width: 680px) {
+        .certificates-grid {
+            grid-template-columns: 1fr !important;
+            gap: 1rem;
+            margin-bottom: 1rem !important;
+            padding: 0 1rem;
+        }
+
+        /* Hide the third certificate in main grid */
+        .desktop-third-cert {
+            display: none !important;
+        }
+
+        /* Show mobile-only section and hide by default */
+        .mobile-only {
+            display: block !important;
+        }
+
+        #certificates-photo-extra {
+            display: none !important;
+            margin: 0 !important;
+        }
+
+        /* Show photo extra certificates when expanded - single column */
+        #certificates-photo-extra.show-expanded {
+            display: grid !important;
+            grid-template-columns: 1fr !important;
+            margin-bottom: 1rem !important;
+            padding: 0 1rem;
+        }
+
+        .certificate-card {
+            padding: 1rem;
+            margin: 0 0.5rem;
+        }
+
+        /* Photo certificates for small screens - landscape style */
+        .cert-image-container {
+            height: 160px;
+        }
+
+        /* Photo-based certificates responsive - landscape style */
+        .cert-overlay {
+            padding: 1.5rem 1rem 1rem 1rem;
+        }
+
+        .cert-info h4 {
+            font-size: 1rem;
+        }
+
+        .cert-info .cert-provider {
+            font-size: 0.85rem;
+        }
+
+        .cert-info .cert-date {
+            font-size: 0.8rem;
+        }
+
+        /* Traditional certificate cards */
+        .certificate-card {
+            padding: 1.5rem;
+        }
+
+        .cert-icon {
+            width: 50px;
+            height: 50px;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .certificate-card h4 {
+            font-size: 1.1rem;
+        }
+
+        .certificate-card .cert-provider {
+            font-size: 0.9rem;
+        }
+
+        .cert-description {
+            font-size: 0.9rem;
+        }
+
+        .subsection-title {
+            font-size: 1.6rem;
+            margin-bottom: 2rem;
+        }
+
+        /* See More Button Responsive */
+        .see-more-btn {
+            padding: 0.8rem 1.5rem;
+            font-size: 0.9rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .education-section {
+            padding: 2rem 0;
+        }
+
+        .education-timeline::before {
+            left: 15px;
+        }
+
+        .timeline-item {
+            padding-left: 50px;
+            margin-bottom: 1.5rem;
+        }
+
+        .timeline-icon {
+            left: 3px;
+            width: 20px;
+            height: 20px;
+            font-size: 0.7rem;
+        }
+
+        .timeline-content {
+            padding: 1rem;
+        }
+
+        .timeline-content::before {
+            left: -6px;
+            border-right-width: 6px;
+            border-top-width: 6px;
+            border-bottom-width: 6px;
+        }
+
+        .timeline-content h3 {
+            font-size: 1.1rem;
+        }
+
+        .timeline-content h4 {
+            font-size: 1rem;
+        }
+
+        .timeline-period {
+            font-size: 0.75rem;
+            padding: 0.3rem 0.6rem;
+        }
+
+        /* Education status badges - small mobile */
+        .education-status {
+            font-size: 0.6rem;
+            padding: 0.15rem 0.5rem;
+            margin-left: 0.3rem;
+            margin-bottom: 0.3rem;
+        }
+
+        /* Remove extra spacing when certificates are hidden */
+        .achievements-section .certificates-grid:empty {
+            display: none;
+        }
+
+        .cert-overlay {
+            padding: 1rem 0.8rem 0.8rem 0.8rem;
+        }
+
+        .cert-info h4 {
+            font-size: 0.9rem;
+        }
+    }
+
+    .certificates-grid {
+        padding: 0 0.5rem;
+    }
+
+    .subsection-title {
+        font-size: 1.4rem;
+    }
+
+    .see-more-btn {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* ===== PROJECTS SECTION RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .projects-section {
+        padding: 0 0 2rem 0;
+    }
+
+    .section-subtitle {
+        font-size: 0.95rem;
+        padding: 0 1rem;
+    }
+
+    /* New Projects Grid Responsive */
+    .projects-grid-new {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-top: 1.5rem;
+        padding: 0 0.5rem;
+    }
+
+    .project-card-new {
+        padding: 1.25rem;
+    }
+
+    .project-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    .project-icon i {
+        font-size: 1.2rem;
+    }
+
+    .project-title-new {
+        font-size: 1.1rem;
+    }
+
+    .project-desc-new {
+        font-size: 0.85rem;
+    }
+
+    .project-tag {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.5rem;
+    }
+
+    .project-buttons {
+        gap: 0.6rem;
+    }
+
+    .project-btn-new {
+        padding: 0.55rem 0.9rem;
+        font-size: 0.8rem;
+    }
+
+    /* Legacy styles */
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .project-card {
+        margin: 0 1rem;
+    }
+
+    .project-image {
+        height: 200px;
+    }
+
+    .project-content {
+        padding: 1.2rem;
+    }
+
+    .project-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+    }
+
+    .project-title {
+        font-size: 1.2rem;
+        margin-bottom: 0;
+    }
+
+    .project-description {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+
+    .project-tech {
+        gap: 0.4rem;
+        margin-bottom: 1rem;
+    }
+
+    .project-tech .skill-tag {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.6rem;
+    }
+
+    .project-features {
+        display: none;
+    }
+
+    .project-actions {
+        flex-direction: row;
+        gap: 0.8rem;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .project-btn {
+        width: auto;
+        justify-content: center;
+        padding: 0.8rem;
+        font-size: 1rem;
+        min-width: 48px;
+    }
+
+    .project-btn span {
+        display: none;
+    }
+
+    .project-btn i {
+        margin: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-section {
+        padding: 0 0 1.5rem 0;
+    }
+
+    .section-subtitle {
+        font-size: 0.9rem;
+    }
+
+    /* New Projects Grid Responsive - Small */
+    .projects-grid-new {
+        gap: 0.9rem;
+        margin-top: 1.2rem;
+        padding: 0 0.25rem;
+    }
+
+    .project-card-new {
+        padding: 1rem;
+        gap: 0.75rem;
+    }
+
+    .project-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .project-icon i {
+        font-size: 1.1rem;
+    }
+
+    .project-title-new {
+        font-size: 1rem;
+    }
+
+    .project-desc-new {
+        font-size: 0.8rem;
+        line-height: 1.5;
+    }
+
+    .project-tags {
+        gap: 0.4rem;
+    }
+
+    .project-tag {
+        font-size: 0.65rem;
+        padding: 0.18rem 0.45rem;
+    }
+
+    .project-btn-new {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.75rem;
+    }
+
+    /* Legacy styles */
+    .projects-grid {
+        gap: 1.2rem;
+        margin-top: 1.5rem;
+    }
+
+    .project-card {
+        margin: 0 0.5rem;
+    }
+
+    .project-image {
+        height: 180px;
+    }
+
+    .project-content {
+        padding: 1rem;
+    }
+
+    .project-title {
+        font-size: 1.1rem;
+    }
+
+    .project-description {
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+
+    .project-tech .skill-tag {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.5rem;
+    }
+
+    .project-features li {
+        font-size: 0.8rem;
+    }
+
+    .project-btn {
+        padding: 0.7rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    .status-badge {
+        font-size: 0.7rem;
+        padding: 0.25rem 0.6rem;
+    }
+}
+
+/* ===== MOBILE SCROLL FIX ===== */
+/* Disable smooth scroll on mobile/tablet for natural free scrolling */
+@media (max-width: 992px) {
+    html {
+        scroll-behavior: auto !important;
+    }
+
+    /* Remove forced full-viewport height on sections for mobile */
+    /* This prevents section-wise snapping and allows free scrolling */
+    .hero-section,
+    .about-section,
+    .skills-section,
+    .education-section,
+    .projects-section,
+    .contact-section {
+        min-height: auto !important;
+    }
+}
+
+/* Also apply to touch devices regardless of screen size */
+@media (pointer: coarse) {
+    html {
+        scroll-behavior: auto !important;
+    }
+}

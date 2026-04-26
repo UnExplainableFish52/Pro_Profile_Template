@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#080c08">
+  <!-- TEMPLATE NOTE: Replace brand_name and brand_domain placeholders in this page to match your site identity. -->
+  <title>404 Error | Page Not Found | brand_name</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:      #080c08;
+      --accent:  #00df9a;
+      --accent-dim: rgba(0, 223, 154, 0.12);
+      --accent-glow: rgba(0, 223, 154, 0.35);
+      --text:    #f0f4f0;
+      --muted:   #4a6a4a;
+      --sub:     #8a9e8a;
+      --border:  rgba(0, 223, 154, 0.14);
+      --radius:  12px;
+      --tr:      all 0.3s cubic-bezier(0.4,0,0.2,1);
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+
+    /* ── MATRIX CANVAS ── */
+    #cv {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── BLOBS ── */
+    .blob {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(90px);
+      pointer-events: none;
+      z-index: 0;
+      animation: blobDrift 16s ease-in-out infinite alternate;
+    }
+    .b1 { width:850px;height:850px; background:radial-gradient(circle,rgba(0,223,154,.14) 0%,transparent 70%); top:-260px;right:-200px; animation-duration:14s; }
+    .b2 { width:750px;height:750px; background:radial-gradient(circle,rgba(0,223,154,.12) 0%,transparent 70%); bottom:-220px;left:-160px; animation-duration:19s;animation-delay:-7s; }
+    .b3 { width:580px;height:580px; background:radial-gradient(circle,rgba(0,223,154,.10) 0%,transparent 70%); top:50%;left:50%;transform:translate(-50%,-50%); animation-duration:24s;animation-delay:-12s; }
+    .b4 { width:500px;height:500px; background:radial-gradient(circle,rgba(0,223,154,.11) 0%,transparent 70%); top:10%;left:-130px; animation-duration:20s;animation-delay:-4s; }
+    .b5 { width:440px;height:440px; background:radial-gradient(circle,rgba(0,223,154,.10) 0%,transparent 70%); bottom:15%;right:-80px; animation-duration:17s;animation-delay:-9s; }
+    .b6 { width:380px;height:380px; background:radial-gradient(circle,rgba(0,223,154,.09) 0%,transparent 70%); top:60%;left:10%; animation-duration:22s;animation-delay:-2s; }
+    .b7 { width:320px;height:320px; background:radial-gradient(circle,rgba(0,223,154,.08) 0%,transparent 70%); top:25%;right:8%; animation-duration:18s;animation-delay:-15s; }
+    @keyframes blobDrift {
+      0%   { transform: translate(0,0) scale(1); }
+      100% { transform: translate(25px,18px) scale(1.08); }
+    }
+    .b3 { animation-name: blobDriftCenter; }
+    @keyframes blobDriftCenter {
+      0%   { transform: translate(-50%,-50%) scale(1); }
+      100% { transform: translate(calc(-50% + 20px), calc(-50% + 14px)) scale(1.07); }
+    }
+
+    /* ── LAYOUT ── */
+    .page {
+      position: relative;
+      z-index: 1;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.5rem 6rem;
+      text-align: center;
+    }
+
+    /* ── GLITCH 404 ── */
+    .glitch-wrap {
+      position: relative;
+      margin-bottom: 0.5rem;
+      line-height: 1;
+      user-select: none;
+    }
+    .glitch {
+      font-size: clamp(7rem, 22vw, 14rem);
+      font-weight: 800;
+      letter-spacing: -4px;
+      color: transparent;
+      background: linear-gradient(135deg, #00df9a 0%, #00ffc8 50%, #00b87a 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      position: relative;
+      display: inline-block;
+      animation: flicker 5s infinite;
+    }
+    .glitch::before,
+    .glitch::after {
+      content: attr(data-text);
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, #00df9a 0%, #00ffc8 50%, #00b87a 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .glitch::before {
+      clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+      transform: translate(-3px, -2px);
+      animation: glitchTop 4s infinite linear;
+      opacity: 0.7;
+      filter: hue-rotate(180deg);
+    }
+    .glitch::after {
+      clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+      transform: translate(3px, 2px);
+      animation: glitchBot 4s infinite linear;
+      opacity: 0.7;
+      filter: hue-rotate(60deg);
+    }
+    @keyframes glitchTop {
+      0%,90%,100% { transform: translate(-3px,-2px); clip-path: polygon(0 0,100% 0,100% 35%,0 35%); }
+      92% { transform: translate(4px,-2px); clip-path: polygon(0 5%,100% 5%,100% 40%,0 40%); }
+      94% { transform: translate(-4px, 0); clip-path: polygon(0 0,100% 0,100% 30%,0 30%); }
+      96% { transform: translate(2px,-3px); }
+    }
+    @keyframes glitchBot {
+      0%,90%,100% { transform: translate(3px,2px); clip-path: polygon(0 65%,100% 65%,100% 100%,0 100%); }
+      92% { transform: translate(-4px,2px); clip-path: polygon(0 60%,100% 60%,100% 95%,0 95%); }
+      94% { transform: translate(4px,0); clip-path: polygon(0 70%,100% 70%,100% 100%,0 100%); }
+      96% { transform: translate(-2px,3px); }
+    }
+    @keyframes flicker {
+      0%,95%,100% { opacity: 1; }
+      96% { opacity: 0.85; }
+      97% { opacity: 1; }
+      98% { opacity: 0.7; }
+      99% { opacity: 1; }
+    }
+
+    /* ── SCAN LINE over the 404 ── */
+    .glitch-wrap::after {
+      content: '';
+      position: absolute;
+      left: 0; right: 0;
+      height: 3px;
+      background: rgba(0,223,154,0.25);
+      animation: scanLine 3s ease-in-out infinite;
+      pointer-events: none;
+    }
+    @keyframes scanLine {
+      0%   { top: 0%;    opacity: 0; }
+      10%  { opacity: 1; }
+      90%  { opacity: 1; }
+      100% { top: 100%;  opacity: 0; }
+    }
+
+    /* ── BADGE ── */
+    .err-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--accent-dim);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 0.3rem 0.9rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 1.2rem;
+    }
+    .err-badge .dot {
+      width: 6px; height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+      box-shadow: 0 0 6px var(--accent);
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%,100% { opacity:1; transform:scale(1); }
+      50%      { opacity:.4; transform:scale(.7); }
+    }
+
+    /* ── HEADLINE & SUB ── */
+    .err-title {
+      font-size: clamp(1.4rem, 3.5vw, 2rem);
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+    .err-sub {
+      font-size: 0.95rem;
+      color: var(--sub);
+      max-width: 480px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.7;
+    }
+    .err-sub span { color: var(--accent); font-weight: 500; }
+
+    /* ── PRIMARY BUTTON ── */
+    .btn-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      background: linear-gradient(135deg, #00df9a, #00b87a);
+      color: #050a05;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.92rem;
+      font-weight: 700;
+      padding: 0.75rem 2rem;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: var(--tr);
+      box-shadow: 0 0 20px rgba(0,223,154,0.3);
+      margin-bottom: 0;
+      letter-spacing: 0.3px;
+    }
+    .btn-home:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 35px rgba(0,223,154,0.5);
+      background: linear-gradient(135deg, #00ffc8, #00df9a);
+    }
+
+    /* ── FOOTER ── */
+    .page-footer {
+      position: fixed;
+      bottom: 1.2rem;
+      left: 0; right: 0;
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+    .page-footer a { color: var(--accent); text-decoration: none; }
+    .page-footer a:hover { text-decoration: underline; }
+
+    /* ── TERMINAL BLINK ── */
+    .cursor {
+      display: inline-block;
+      color: #f59e0b;
+      font-weight: 800;
+      font-size: 1.15em;
+      line-height: 1;
+      vertical-align: baseline;
+      margin-left: 1px;
+      animation: blink .9s step-end infinite;
+    }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 480px) {
+      .glitch { letter-spacing: -2px; }
+      .quick-links { gap: 0.45rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <canvas id="cv"></canvas>
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+  <div class="blob b3"></div>
+  <div class="blob b4"></div>
+  <div class="blob b5"></div>
+  <div class="blob b6"></div>
+  <div class="blob b7"></div>
+
+  <div class="page">
+
+    <!-- 404 glitch number -->
+    <div class="glitch-wrap">
+      <div class="glitch" data-text="404">404</div>
+    </div>
+
+    <!-- Badge -->
+    <div class="err-badge">
+      <div class="dot"></div>
+      Error · Page Not Found
+    </div>
+
+    <!-- Headline -->
+    <h1 class="err-title">Looks like this page got lost in the void<span class="cursor">_</span></h1>
+
+    <!-- Sub -->
+    <p class="err-sub">
+      The page you're looking for doesn't exist, was moved, or maybe never did.
+      Don't worry, <span>brand_name</span> has a way back home.
+    </p>
+
+    <!-- Primary CTA -->
+    <a href="https://brand_domain/" class="btn-home">
+      <i class="fas fa-house"></i> Take Me Home
+    </a>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="page-footer">
+    &copy; 2026 <a href="https://brand_domain/">brand_name</a>
+    &nbsp;&middot;&nbsp; brand_footer_tagline
+  </footer>
+
+  <script>
+    /* ── MATRIX RAIN ── */
+    (function () {
+      const cv  = document.getElementById('cv');
+      const ctx = cv.getContext('2d');
+
+      const FONT_SIZE = 15;
+      const SPEED_MS  = 45;   // lower = faster rain
+      const OPACITY   = 0.06; // trail fade (lower = longer tails)
+      const COLOR     = '#00df9a'; // your neon green
+
+      // Katakana + digits matrix style
+      const CHARS = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン0123456789';
+      const charArr = CHARS.split('');
+
+      let cols, drops;
+
+      function resize() {
+        cv.width  = innerWidth;
+        cv.height = innerHeight;
+        cols  = Math.floor(cv.width / FONT_SIZE);
+        drops = [];
+        for (let i = 0; i < cols; i++)
+          drops[i] = Math.floor(Math.random() * -80); // staggered start
+      }
+
+      function draw() {
+        // Fade previous frame — creates the trail effect
+        ctx.fillStyle = `rgba(8,12,8,${OPACITY})`;
+        ctx.fillRect(0, 0, cv.width, cv.height);
+
+        ctx.font = FONT_SIZE + 'px monospace';
+
+        for (let i = 0; i < drops.length; i++) {
+          const ch = charArr[Math.floor(Math.random() * charArr.length)];
+          const x  = i * FONT_SIZE;
+          const y  = drops[i] * FONT_SIZE;
+
+          // Bright white leading character
+          if (drops[i] > 0) {
+            ctx.fillStyle = 'rgba(255,255,255,0.85)';
+            ctx.fillText(ch, x, y);
+          }
+
+          // Draw the column character slightly above in green
+          if (drops[i] > 1) {
+            ctx.fillStyle = COLOR;
+            const prevCh = charArr[Math.floor(Math.random() * charArr.length)];
+            ctx.fillText(prevCh, x, y - FONT_SIZE);
+          }
+
+          // Reset column when it exits screen
+          if (y > cv.height && Math.random() > 0.975)
+            drops[i] = 0;
+
+          drops[i]++;
+        }
+      }
+
+      window.addEventListener('resize', resize);
+      resize();
+      setInterval(draw, SPEED_MS);
+    })();
+  </script>
+</body>
+</html>
+
+
