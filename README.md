@@ -197,3 +197,6 @@ Inside `assets/`:
 
 Optional media (only if you keep a certifications gallery):
 - certificate image files referenced in your cards
+
+
+### I hope you were able to make yourself a beautiful website with this template. Should you have any queries, dont hesitate to reach out to me!
